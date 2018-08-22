@@ -71,10 +71,10 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(
- *     normalizationContext={"groups"={"read"}},
- *     denormalizationContext={"groups"={"write"}}
- * )
+ * @ApiResource(attributes={
+ *     "normalization_context"={"groups"={"read"}},
+ *     "denormalization_context"={"groups"={"write"}}
+ * })
  */
 class Book
 {
@@ -160,7 +160,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(
+ * @ApiResource(attributes={
  *     normalizationContext={"groups"={"get"}},
  *     itemOperations={
  *         "get",
@@ -168,7 +168,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *             "normalization_context"={"groups"={"put"}}
  *         }
  *     }
- * )
+ * })
  */
 class Book
 {
